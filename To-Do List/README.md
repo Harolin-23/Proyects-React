@@ -1,8 +1,34 @@
-# React + Vite
+# Todo List Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una aplicación sencilla para gestionar tus tareas diarias de forma eficiente. Agrega, actualiza y elimina tareas con facilidad.
 
-Currently, two official plugins are available:
+  ![Diseño](ruta/a/la/imagen/agregar-tarea.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Características
+
+- **Agregar Tareas**  
+  Puedes agregar nuevas tareas a tu lista simplemente ingresando el texto en el campo correspondiente.
+
+  ![Agregar Tarea](ruta/a/la/imagen/agregar-tarea.png)
+
+- **Actualizar Tareas**  
+  Para actualizar una tarea existente, simplemente presiona y mantén presionado sobre la tarea que deseas editar. Se abrirá una ventana con las opciones seleccionadas.
+
+  ![Actualizar Tarea](ruta/a/la/imagen/actualizar-tarea.png)
+
+- **Eliminar Tareas**  
+  Para eliminar una tarea, desliza hacia un lado. Si decides que realmente quieres eliminarla, desliza nuevamente y se eliminará de la lista.
+
+  ![Eliminar Tarea](ruta/a/la/imagen/eliminar-tarea.png)
+
+## Diseño
+
+La aplicación tiene un diseño intuitivo y fácil de usar. A continuación, puedes ver una captura de pantalla del diseño:
+
+![Diseño de la Aplicación](ruta/a/la/imagen/diseño.png)
+
+## Instalación
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://tu-repositorio-url.git
