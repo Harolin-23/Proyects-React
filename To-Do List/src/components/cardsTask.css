@@ -8,6 +8,7 @@
     border-radius: 12px;
     transition: 0.2s;
     border: 1px solid rgba(0, 0, 0, 0.233);
+    cursor: grab;
     
 }
 
@@ -119,7 +120,7 @@
 }
 
 .checker i{
-    cursor: pointer;
+    cursor:pointer;
 }
 
 .container-task.swiped {
