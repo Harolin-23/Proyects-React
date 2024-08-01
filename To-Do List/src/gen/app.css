@@ -33,8 +33,9 @@
 .container-task {
     width: 100%;
     height: 20vh;
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.315);
     position: relative;
+    border-radius: 12px;
 }
 
 
