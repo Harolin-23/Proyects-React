@@ -9,6 +9,7 @@
     gap: 20px;
     padding-left: 12px;
     padding-right: 12px;
+    transition: 0.3s ease-in !important;
 }
 
 .sup-barr{
@@ -29,15 +30,16 @@
     transition: 0.2s;
 
 }
-
-.container-task {
+.bto-barr{
     width: 100%;
-    height: 20vh;
-    border: 1px solid rgba(0, 0, 0, 0.315);
-    position: relative;
-    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2%;
+    padding-right: 2%;
+    height: auto;
+    gap: 10%;
+    transition: 0.3s ease-in !important;
 }
-
 
 
 
@@ -69,7 +71,7 @@
     backdrop-filter: blur(12px);
     border: 1px solid rgba(57, 204, 155, 0.938);
     transition: 0.5s;
-    color: rgba(0, 0, 0, 0.349);
+    color: rgba(0, 0, 0, 0.582);
 }
 
 .botton-add:hover{
@@ -78,9 +80,16 @@
     color: white !important;
     height: 10%;
     font-size: calc(1.5em + 1vw);
+    box-shadow:
+    inset 0 -3em 3em rgba(0, 0, 0, 0.021),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.281);
+
 
 }
 .botton-add:active{
     transform: scale(0.99);
 
 }
+
+
+
