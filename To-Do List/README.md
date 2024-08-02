@@ -9,8 +9,6 @@ Una aplicación sencilla para gestionar tus tareas diarias de forma eficiente. A
 - **Agregar Tareas**  
   Puedes agregar nuevas tareas a tu lista simplemente ingresando el texto en el campo correspondiente.
 
-  ![Agregar Tarea](ruta/a/la/imagen/agregar-tarea.png)
-
 - **Actualizar Tareas**  
   Para actualizar una tarea existente, simplemente presiona y mantén presionado sobre la tarea que deseas editar. Se abrirá una ventana con las opciones seleccionadas.
 
