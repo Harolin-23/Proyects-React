@@ -14,7 +14,7 @@ Una aplicación sencilla para gestionar tus tareas diarias de forma eficiente. A
 - **Actualizar Tareas**  
   Para actualizar una tarea existente, simplemente presiona y mantén presionado sobre la tarea que deseas editar. Se abrirá una ventana con las opciones seleccionadas.
 
-  ![Actualizar Tarea](ruta/a/la/imagen/actualizar-tarea.png)
+![preview](src/ReadmeAssets/videoOfeditPreview.gif)
 
 - **Eliminar Tareas**  
   Para eliminar una tarea, desliza hacia un lado. Si decides que realmente quieres eliminarla, desliza nuevamente y se eliminará de la lista.
