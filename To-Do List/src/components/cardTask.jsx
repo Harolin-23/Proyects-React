@@ -6,7 +6,7 @@ import './cardsTask.css'
 
 export const CardContainer = ()=>{
 
-    const [presionado, setPresionado] = useState(false);
+    const [presionado, setPresionado] = useState(true);
     const [inicio, setInicio] = useState(0);
     const timeoutRef = useRef(null);
   
@@ -15,13 +15,19 @@ export const CardContainer = ()=>{
       timeoutRef.current = setTimeout(() => {
         if(presionado == true){
             setPresionado(false);
+            localStorage.setItem("status", JSON.stringify(presionado));
         }else{
             setPresionado(true);
+            localStorage.setItem("status", JSON.stringify(presionado));
         }
      
       }, 1000);
     };
-  
+
+    useEffect(() => {
+      }, [presionado]);
+    
+
     const handleMouseUp = () => {
       clearTimeout(timeoutRef.current);
       const fin = Date.now();
@@ -34,7 +40,7 @@ export const CardContainer = ()=>{
         onMouseUp={handleMouseUp}
         >
             {
-                !presionado ? (
+                presionado ? (
                     <>
                     <div className='superior-info'>
                         <div className='title-task'>
