@@ -4,35 +4,29 @@ import React, {  useState, useEffect, useRef } from 'react';
 
 import './cardsTask.css'
 
-export const CardContainer = ()=>{
+export const CardContainer = ({OnpressAction})=>{
 
     const [presionado, setPresionado] = useState(true);
-    const [inicio, setInicio] = useState(0);
     const timeoutRef = useRef(null);
   
     const handleMouseDown = () => {
-      setInicio(Date.now());
       timeoutRef.current = setTimeout(() => {
-        if(presionado == true){
-            setPresionado(false);
-            localStorage.setItem("status", JSON.stringify(presionado));
-        }else{
-            setPresionado(true);
-            localStorage.setItem("status", JSON.stringify(presionado));
-        }
-     
+        presionado ?  setPresionado(false) :   setPresionado(true);
       }, 1000);
     };
 
     useEffect(() => {
-      }, [presionado]);
+      }, [OnpressAction]);
     
 
     const handleMouseUp = () => {
       clearTimeout(timeoutRef.current);
-      const fin = Date.now();
-      const tiempo = fin - inicio;
     };
+
+    const editorOpenb = ()=>{
+        setPresionado(true)
+        OnpressAction(true)
+    }
   
     return(
         <div className='container-task'
@@ -62,11 +56,10 @@ export const CardContainer = ()=>{
                             <div className='time'>
                                 <p>20:10 pm <b><i class="fa-regular fa-clock"></i></b></p>
                             </div>
-
                     </div>
                     </>
                 ) : (
-                    <div className=' activeEditor'>
+                    <div className=' activeEditor' onClick={editorOpenb} >
                         <h1>Click para editar <i class="fa-solid fa-pen"></i></h1>
                     </div>
                 )

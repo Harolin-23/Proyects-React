@@ -6,27 +6,26 @@ import {CardContainer} from './components/cardTask'
 function App() {
 
   const [tasksButtonAdd, settasksButtonAdd] = useState(false)
-
+  const [activedEd, SetactivedEd] = useState(false)
 
   const classButtonTask = `botton-add ${tasksButtonAdd ? "activeBt" : "disableBt"}`;
 
-
     const handleActiveForm = ()=>{
       settasksButtonAdd(true)
+      SetactivedEd(false)
     }
-
     const handleDesActiveForm = ()=>{
       settasksButtonAdd(false)
     }
 
-
     useEffect(() => {
-        let fS = JSON.parse(localStorage.getItem("status"));
-    
-        settasksButtonAdd(fS)
-    }, []);
-  
+      if(activedEd) handleActiveForm();
+    }, [activedEd]);
 
+    const HandleDetectActiveComponent = (status)=>{
+      SetactivedEd(status);
+    }
+  
   return (
     <>
       <div className='container-app'>
@@ -34,7 +33,7 @@ function App() {
              <h1>To-Do List  <i class="fa-solid fa-list-check"></i></h1>
           </div>
           <div className='bto-barr'>
-            <CardContainer />
+            <CardContainer OnpressAction={HandleDetectActiveComponent}/>
             <CardContainer />
           </div>
          
