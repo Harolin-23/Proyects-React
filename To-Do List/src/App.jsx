@@ -3,7 +3,10 @@ import { useState,useEffect } from 'react'
 import './gen/app.css'
 import {CardContainer} from './components/cardTask'
 
+
+
 function App() {
+
 
   const [tasksButtonAdd, settasksButtonAdd] = useState(false)
   const [activedEd, SetactivedEd] = useState(false)
@@ -25,7 +28,7 @@ function App() {
     const HandleDetectActiveComponent = (status)=>{
       SetactivedEd(status);
     }
-  
+
   return (
     <>
       <div className='container-app'>
@@ -34,7 +37,6 @@ function App() {
           </div>
           <div className='bto-barr'>
             <CardContainer OnpressAction={HandleDetectActiveComponent}/>
-            <CardContainer />
           </div>
          
       </div>
