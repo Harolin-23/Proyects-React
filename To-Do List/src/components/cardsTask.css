@@ -6,10 +6,48 @@
     align-items: center;
     position: relative;
     border-radius: 12px;
-    transition: 0.2s;
+    transition: 0.5s ease-in;
     border: 1px solid rgba(0, 0, 0, 0.233);
     
 }
+
+.activeEditor{
+    width: 100%;
+    height: 100%;
+    background-color: aquamarine !important;
+    animation-name: activedEdit;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    color: white;
+    font-size: calc(0.4em + 1vw);
+    cursor: pointer;
+    transition: 0.5s ease-in;
+  }
+
+  .activeEditor:active{
+    transform: scale(0.99);
+  }
+
+
+  @keyframes activedEdit{
+    0%{
+        width: 0%;
+        height: 70%;
+        font-size: calc(0em + 0vw);
+    }100%{
+        width: 100%;
+        height: 100%;
+        font-size: calc(0.4em + 1vw);
+        
+        
+    }
+  }
+
 
 .container-task:hover {
     transform: scale(1.007);
@@ -130,3 +168,4 @@
   .container-task.hidden {
     display: none;
   }
+
