@@ -1,24 +1,25 @@
 export const data = [
     {
-        "Title": "Reunión con el equipo",
-        "Description": "Reunión semanal para discutir el progreso del proyecto.",
+        "Title": "Task 1",
+        "Description": "Description for Task 1",
         "Priority": "High",
-        "TimeFinal": "11:00:00",
-        "TimeAdded": "09:00:00"
+        "TimeFinal": "10:00:00",
+        "TimeAdded": "08:00:00"
     },
     {
-        "Title": "Revisión de código",
-        "Description": "Revisar el código del nuevo módulo de autenticación.",
+        "Title": "Task 2",
+        "Description": "Description for Task 2",
         "Priority": "Medium",
-        "TimeFinal": "15:00:00",
-        "TimeAdded": "13:00:00"
+        "TimeFinal": "14:30:00",
+        "TimeAdded": "12:00:00"
     },
     {
-        "Title": "Escribir documentación",
-        "Description": "Escribir la documentación para la API REST.",
+        "Title": "Task 3",
+        "Description": "Description for Task 3",
         "Priority": "Low",
-        "TimeFinal": "17:00:00",
-        "TimeAdded": "14:00:00"
-    },
-
+        "TimeFinal": "09:15:00",
+        "TimeAdded": "07:45:00"
+    }
 ];
+
+
