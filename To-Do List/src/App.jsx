@@ -3,29 +3,42 @@ import { useState,useEffect } from 'react'
 import './gen/app.css'
 import {CardContainer} from './components/cardTask'
 
+
+
 function App() {
 
   const [tasksButtonAdd, settasksButtonAdd] = useState(false)
   const [activedEd, SetactivedEd] = useState(false)
+  const [dataF,SetDataF] =  useState({})
 
   const classButtonTask = `botton-add ${tasksButtonAdd ? "activeBt" : "disableBt"}`;
 
+  const dataForm = activedEd ?
+  {
+    Title: '',
+    Description: '',
+    TimeFinal: '',
+    TimeAdded:'',
+    Priority: ''
+  } : dataF;
+
     const handleActiveForm = ()=>{
+   
       settasksButtonAdd(true)
       SetactivedEd(false)
     }
     const handleDesActiveForm = ()=>{
+      SetactivedEd(false)
       settasksButtonAdd(false)
     }
-
     useEffect(() => {
       if(activedEd) handleActiveForm();
-    }, [activedEd]);
+    }, [activedEd, dataF]);
 
     const HandleDetectActiveComponent = (status)=>{
       SetactivedEd(status);
     }
-  
+
   return (
     <>
       <div className='container-app'>
@@ -33,8 +46,10 @@ function App() {
              <h1>To-Do List  <i class="fa-solid fa-list-check"></i></h1>
           </div>
           <div className='bto-barr'>
-            <CardContainer OnpressAction={HandleDetectActiveComponent}/>
-            <CardContainer />
+           <CardContainer OnpressAction={(status, activeData) => {
+              HandleDetectActiveComponent(status)
+              SetDataF(activeData)
+          }} />
           </div>
          
       </div>
@@ -45,12 +60,12 @@ function App() {
           tasksButtonAdd ? (
               <div className='containerInput'>
     
-                <input type="text" placeholder="Title" />
-                <input type="text" placeholder="Description" />
-                <input type="time" />
+                <input type="text" placeholder="Title" value={dataForm.Title}/>
+                <input type="text" placeholder="Description" value={dataForm.Description}/>
+                <input type="time" value={dataForm.TimeFinal} />
                 <div className='p-select'>
                   <label>priority: </label>
-                    <select name="color">
+                    <select name="color" value={dataForm.Priority}>
                       <option value="Alta"> <i class="fa-solid fa-circle"></i>Alta</option>
                       <option value="Media">Media<i class="fa-solid fa-circle organge"></i></option>
                       <option value="baja">baja <i class="fa-solid fa-circle green"></i></option>
