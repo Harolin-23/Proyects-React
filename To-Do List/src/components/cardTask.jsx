@@ -3,7 +3,7 @@ import { data } from '../data/data.js';
 import { fetchData } from '../api/callData.js';
 import './cardsTask.css';
 
-export const CardContainer = ({ OnpressAction }) => {
+export const CardContainer = ({ OnpressAction,dataActive}) => {
     const [dataTask, setDataTak] = useState([]);
     const [presionadoStates, setPresionadoStates] = useState({});
     const timeoutRefs = useRef({});
@@ -19,10 +19,11 @@ export const CardContainer = ({ OnpressAction }) => {
 
     const FechElements = async () => {
         const response = await fetchData(data);
+ 
         setDataTak(response);
-        // Initialize presionadoStates with true for each item
         const initialStates = {};
         response.forEach((_, index) => {
+       
             initialStates[index] = true;
         });
         setPresionadoStates(initialStates);
@@ -37,11 +38,13 @@ export const CardContainer = ({ OnpressAction }) => {
     };
 
     const editorOpenb = (index) => {
+       console.log(dataTask[index])
+       const dataActive = dataTask[index];
         setPresionadoStates((prevState) => ({
             ...prevState,
             [index]: true
         }));
-        OnpressAction(true);
+        OnpressAction(true , dataActive);
     };
 
     return (
@@ -55,7 +58,7 @@ export const CardContainer = ({ OnpressAction }) => {
                 >
                     {presionadoStates[index] ? (
                         <>
-                            <div className='superior-info'>
+                            <div className='superior-info' key={index} id={index}>
                                 <div className='title-task'>
                                     <p><b>{item.Title}</b></p>
                                 </div>
