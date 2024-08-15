@@ -1,4 +1,4 @@
-# Proyectos de práctica de React
+# Proyectos de práctica de React 🧿
 
 Este repositorio contiene una serie de proyectos de práctica para ayudarte a mejorar tus habilidades en React. Los proyectos están categorizados por niveles de dificultad, que van desde principiante hasta experto. Cada proyecto se centra en diferentes conceptos y funcionalidades de React.
 
