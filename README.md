@@ -1,64 +1,64 @@
-# React Practice Projects
+# Proyectos de práctica de React
 
-This repository contains a series of practice projects to help improve your skills in React. The projects are categorized by difficulty levels, ranging from beginner to expert. Each project focuses on different React concepts and functionalities.
+Este repositorio contiene una serie de proyectos de práctica para ayudarte a mejorar tus habilidades en React. Los proyectos están categorizados por niveles de dificultad, que van desde principiante hasta experto. Cada proyecto se centra en diferentes conceptos y funcionalidades de React.
 
-## Projects
+## Proyectos
 
-### Level 1: Beginner
-1. **To-Do List**
-   - **Description:** A simple application to add, edit, and delete tasks.
-   - **Topics Covered:** Components, state, props, events.
+### Nivel 1: Principiante
+1. **Lista de tareas pendientes**
+- **Descripción:** Una aplicación simple para agregar, editar y eliminar tareas.
+- **Temas tratados:** Componentes, estado, propiedades, eventos.
 
-2. **Calculator**
-   - **Description:** A basic calculator with arithmetic operations.
-   - **Topics Covered:** State management, events, simple UI design.
+2. **Calculadora**
+- **Descripción:** Una calculadora básica con operaciones aritméticas.
+- **Temas tratados:** Gestión de estados, eventos, diseño de interfaz de usuario simple.
 
-3. **Image Gallery**
-   - **Description:** A gallery to display images with the ability to view them in full size.
-   - **Topics Covered:** Lists and keys, event handling.
+3. **Galería de imágenes**
+- **Descripción:** Una galería para mostrar imágenes con la posibilidad de verlas en tamaño completo.
+- **Temas tratados:** Listas y claves, manejo de eventos.
 
-### Level 2: Intermediate
-1. **Note Taking App**
-   - **Description:** An application to take notes with functionalities for editing, deleting, and searching.
-   - **Topics Covered:** Form handling, complex state, list filtering.
+### Nivel 2: Intermedio
+1. **Aplicación para tomar notas**
+- **Descripción:** Una aplicación para tomar notas con funcionalidades para editar, eliminar y buscar.
+- **Temas tratados:** Manejo de formularios, estado complejo, filtrado de listas.
 
-2. **World Clock**
-   - **Description:** A clock that shows the time in different time zones.
-   - **Topics Covered:** API usage, state management, custom hooks.
+2. **Reloj mundial**
+- **Descripción:** Un reloj que muestra la hora en diferentes zonas horarias.
+- **Temas tratados:** Uso de API, gestión de estado, ganchos personalizados.
 
-3. **Memory Game**
-   - **Description:** A memory game where cards need to be matched.
-   - **Topics Covered:** Complex state, event handling, game logic design.
+3. **Juego de memoria**
+- **Descripción:** Un juego de memoria en el que se deben hacer coincidir las cartas.
+- **Temas tratados:** Estado complejo, manejo de eventos, diseño de lógica de juego.
 
-### Level 3: Advanced
-1. **Task Manager**
-   - **Description:** A task management application with user authentication.
-   - **Topics Covered:** React Router, Redux or Context API, JWT authentication.
+### Nivel 3: Avanzado
+1. **Administrador de tareas**
+- **Descripción:** Una aplicación de gestión de tareas con autenticación de usuarios.
+- **Temas tratados:** React Router, Redux o Context API, autenticación JWT.
 
-2. **E-commerce**
-   - **Description:** An online store with a shopping cart and payment processing.
-   - **Topics Covered:** Global state management, API integration, protected routes.
+2. **Comercio electrónico**
+- **Descripción:** Una tienda en línea con un carrito de compras y procesamiento de pagos.
+- **Temas tratados:** Gestión global de estados, integración de API, rutas protegidas.
 
-3. **Real-Time Chat**
-   - **Description:** A chat application with real-time functionalities.
-   - **Topics Covered:** WebSockets, real-time state, event handling and subscriptions.
+3. **Chat en tiempo real**
+- **Descripción:** Una aplicación de chat con funcionalidades en tiempo real.
+- **Temas tratados:** WebSockets, estado en tiempo real, manejo de eventos y suscripciones.
 
-### Level 4: Expert
-1. **Social Network**
-   - **Description:** A social platform where users can create profiles, post updates, and follow other users.
-   - **Topics Covered:** Advanced state management, React Router, performance optimization, security.
+### Nivel 4: Experto
+1. **Red social**
+- **Descripción:** Una plataforma social donde los usuarios pueden crear perfiles, publicar actualizaciones y seguir a otros usuarios.
+- **Temas tratados:** Gestión avanzada de estados, React Router, optimización del rendimiento, seguridad.
 
-2. **Analytics Dashboard**
-   - **Description:** A dashboard with charts and statistics, pulling data from various sources.
-   - **Topics Covered:** Integration with chart libraries (like D3.js or Chart.js), real-time data handling, performance optimization.
+2. **Panel de análisis**
+- **Descripción:** Un panel con gráficos y estadísticas, que extrae datos de varias fuentes.
+- **Temas tratados:** Integración con bibliotecas de gráficos (como D3.js o Chart.js), manejo de datos en tiempo real, optimización del rendimiento.
 
-3. **Project Management System**
-   - **Description:** A comprehensive project management application with multiple users, permissions, and notifications.
-   - **Topics Covered:** Architecture of complex applications, roles and permissions management, real-time notifications.
+3. **Sistema de gestión de proyectos**
+- **Descripción:** Una aplicación integral de gestión de proyectos con múltiples usuarios, permisos y notificaciones.
+- **Temas tratados:** Arquitectura de aplicaciones complejas, gestión de roles y permisos, notificaciones en tiempo real.
 
-## Getting Started
+## Primeros pasos
 
-To get started with any of these projects:
+Para comenzar con cualquiera de estos proyectos:
 
 1. Clone the repository:
    ```bash
