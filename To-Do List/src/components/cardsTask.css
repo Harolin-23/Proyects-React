@@ -1,0 +1,171 @@
+.container-task {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-radius: 12px;
+    transition: 0.5s ease-in;
+    border: 1px solid rgba(0, 0, 0, 0.233);
+    
+}
+
+.activeEditor{
+    width: 100%;
+    height: 100%;
+    background-color: aquamarine !important;
+    animation-name: activedEdit;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    color: white;
+    font-size: calc(0.4em + 1vw);
+    cursor: pointer;
+    transition: 0.5s ease-in;
+  }
+
+  .activeEditor:active{
+    transform: scale(0.99);
+  }
+
+
+  @keyframes activedEdit{
+    0%{
+        width: 0%;
+        height: 70%;
+        font-size: calc(0em + 0vw);
+    }100%{
+        width: 100%;
+        height: 100%;
+        font-size: calc(0.4em + 1vw);
+        
+        
+    }
+  }
+
+
+.container-task:hover {
+    transform: scale(1.007);
+    border: 1px solid rgba(0, 0, 0, 0.144);
+    box-shadow:
+    inset 0 -3em 3em rgba(0, 0, 0, 0.021),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.281);
+
+ 
+
+}
+
+.title-task{
+    width: auto;
+}
+
+
+
+.superior-info{
+    width: 100%;
+    height: auto;
+    font-size: calc(0.2em + 1vw);
+    padding-left: 2%;
+    display: flex;
+    gap: 2%;
+    align-items: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+
+.superior-info hr{ 
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.164);
+}
+
+.superior-info p{
+    color: rgba(0, 0, 0, 0.288);
+    font-size: calc(0.5em + 1vw);
+}
+
+
+.superior-info p b { 
+
+    color: rgba(0, 0, 0, 0.288);
+    font-size: calc(1em + 1vw);
+}
+
+
+
+
+.superior-info p i{
+    color: rgba(255, 0, 0, 0.678);
+    font-size: calc(0.5em + 1vw);
+}
+
+
+.bottom-info{
+    width: 100%;
+    height: 50%;
+    padding-left: 2%;
+    display: flex;
+    gap: 2%;
+}
+
+.more-info{
+    width: 40%;
+    height: 100%;
+}
+
+.especifications{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.time{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: 2%;
+    justify-content: end;
+}
+
+.time p i{
+    color: rgb(57, 204, 155);
+}
+
+
+.especifications p{
+    color: rgba(0, 0, 0, 0.363);
+}
+
+.checker{
+    width: 30%;
+    height: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 4%;
+    right: 0%;
+    top: 0%;
+    font-size: 2em;
+}
+
+.checker i{
+    cursor: pointer;
+}
+
+.container-task.swiped {
+    transition: 0.5s ease-in;
+    transform: translateX(-100%);
+  }
+  
+  .container-task.hidden {
+    display: none;
+  }
+
