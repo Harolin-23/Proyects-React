@@ -26,7 +26,7 @@ function App() {
       addTask(dataF); 
     }
     settasksButtonAdd(false);
-    SetactivedEd(false);
+    SetactivedEd(false);s
   };
 
   const handleChange = (e) => {
