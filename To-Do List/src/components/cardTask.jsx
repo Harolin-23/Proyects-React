@@ -27,6 +27,10 @@ export const CardContainer = ({ OnpressAction, dataActive }) => {
         setPresionadoStates(initialStates);
     };
 
+
+
+
+
     const handleMouseUp = (index) => {
         clearTimeout(timeoutRefs.current[index]);
     };
@@ -41,7 +45,6 @@ export const CardContainer = ({ OnpressAction, dataActive }) => {
     };
 
     const editorOpenb = (index) => {
-        console.log(dataTask[index]);
         const dataActive = dataTask[index];
         setPresionadoStates((prevState) => ({
             ...prevState,
@@ -51,7 +54,6 @@ export const CardContainer = ({ OnpressAction, dataActive }) => {
     };
 
     const HandleDeleteCard = (index) => {
-        console.log("close", index);
         const updatedDataTask = dataTask.filter((_, i) => i !== index);
         setDataTak(updatedDataTask);
         setOptionPriority(updatedDataTask);
