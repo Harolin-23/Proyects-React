@@ -53,6 +53,7 @@
     width: 500px;
     height: 400px;
     background-color: aqua;
+    display: none;
 }
 
 
@@ -141,15 +142,34 @@
 }
 
 .red{
-    color: red;
+    background-color: red !important; 
 }
 .orange{
-    color: orange;
+    background-color: orange !important;
 
 }
 .green{
-    color: green;
+    background-color: green ;
 }
+
+.p-ry{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.circlePrior{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(0.4em + 1vw);
+    transition: 0.5s;
+}
+
 
 .p-select{
     margin-left: 20%;

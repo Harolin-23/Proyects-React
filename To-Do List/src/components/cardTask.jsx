@@ -3,10 +3,33 @@ import { data } from '../data/data.js';
 import { fetchData } from '../api/callData.js';
 import './cardsTask.css';
 
-export const CardContainer = ({ OnpressAction,dataActive}) => {
+export const CardContainer = ({ OnpressAction, dataActive }) => {
     const [dataTask, setDataTak] = useState([]);
     const [presionadoStates, setPresionadoStates] = useState({});
+    const [prioriy, Setprioriy] = useState([]);
     const timeoutRefs = useRef({});
+
+    useEffect(() => {
+        FechElements();
+    }, [OnpressAction]);
+
+    useEffect(() => {
+        setOptionPriority();
+    });
+
+    const FechElements = async () => {
+        const response = await fetchData(data);
+        setDataTak(response);
+        const initialStates = {};
+        response.forEach((_, index) => {
+            initialStates[index] = true;
+        });
+        setPresionadoStates(initialStates);
+    };
+
+    const handleMouseUp = (index) => {
+        clearTimeout(timeoutRefs.current[index]);
+    };
 
     const handleMouseDown = (index) => {
         timeoutRefs.current[index] = setTimeout(() => {
@@ -17,34 +40,31 @@ export const CardContainer = ({ OnpressAction,dataActive}) => {
         }, 1000);
     };
 
-    const FechElements = async () => {
-        const response = await fetchData(data);
- 
-        setDataTak(response);
-        const initialStates = {};
-        response.forEach((_, index) => {
-       
-            initialStates[index] = true;
-        });
-        setPresionadoStates(initialStates);
-    };
-
-    useEffect(() => {
-        FechElements();
-    }, [OnpressAction]);
-
-    const handleMouseUp = (index) => {
-        clearTimeout(timeoutRefs.current[index]);
-    };
-
     const editorOpenb = (index) => {
-       console.log(dataTask[index])
-       const dataActive = dataTask[index];
+        console.log(dataTask[index]);
+        const dataActive = dataTask[index];
         setPresionadoStates((prevState) => ({
             ...prevState,
             [index]: true
         }));
-        OnpressAction(true , dataActive);
+        OnpressAction(true, dataActive);
+    };
+
+    const HandleDeleteCard = (index) => {
+        console.log("close", index);
+        const updatedDataTask = dataTask.filter((_, i) => i !== index);
+        setDataTak(updatedDataTask);
+        setOptionPriority(updatedDataTask);
+    };
+
+    const setOptionPriority = (tasks = dataTask) => {
+        const priorities = tasks.map((item) => {
+            if (item.Priority === 'Alta' || item.Priority === 'Media' || item.Priority === 'Baja') {
+                return item.Priority;
+            }
+            return null;
+        });
+        Setprioriy(priorities);
     };
 
     return (
@@ -63,9 +83,19 @@ export const CardContainer = ({ OnpressAction,dataActive}) => {
                                     <p><b>{item.Title}</b></p>
                                 </div>
                                 <hr />
-                                <p>priority <i className="fa-solid fa-circle"></i></p>
+                                <p className='p-ry'>priority 
+                                    {
+                                    prioriy[index] === 'Alta' ? (
+                                        <div className='circlePrior red'></div>
+                                    ) : prioriy[index] === 'Media' ? (
+                                        <div className='circlePrior orange'></div>
+                                    ) : prioriy[index] === 'Baja' ? (
+                                        <div className='circlePrior green'></div>
+                                    ) : null
+                                    }
+                                </p>
                                 <div className='checker'>
-                                    <i className="fa-regular fa-circle"></i>
+                                    <i className="fa-regular fa-circle" onClick={() => HandleDeleteCard(index)}></i>
                                 </div>
                             </div>
                             <div className='bottom-info'>
