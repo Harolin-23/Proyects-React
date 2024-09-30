@@ -10,6 +10,8 @@ Este repositorio contiene una colección de proyectos desarrollados con React Na
      - Uso de componentes básicos de React Native.
      - Aplicación de estilos mediante el sistema de estilos incorporado.
      - Manejo de eventos simples como `onPress`.
+      
+   [Descarga la aplicacion,Asegurate de tener la version mas reciente](https://github.com/Harolin-23/Proyects-React/releases/tag/AppReactNative)
    
   ![Diseño](./viewReactNative/ViewRN.png)
 
