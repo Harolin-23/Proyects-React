@@ -10,12 +10,8 @@ Este repositorio contiene una colección de proyectos desarrollados con React Na
      - Uso de componentes básicos de React Native.
      - Aplicación de estilos mediante el sistema de estilos incorporado.
      - Manejo de eventos simples como `onPress`.
-   - **Instalación:**
-     ```bash
-     npm install
-     npm start
-     ```
-
+   
+  ![Diseño](./viewReactNative/ViewRN.png)
 
 
 ## Instalación General
