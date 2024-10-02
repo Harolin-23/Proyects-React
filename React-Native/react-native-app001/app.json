@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "react-native-app001",
+    "slug": "react-native-app001",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "scheme": "enterpriseApp",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff",
+        "package": "com.enterpriseApk"
+      },
+      "package": "com.harolandreschaverra.reactnativeapp001"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "664c4e78-161f-4d17-87ce-e12578b1611e"
+      }
+    }
+  }
+}
