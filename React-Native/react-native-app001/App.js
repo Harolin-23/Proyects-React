@@ -5,6 +5,7 @@ import fetchData from './lib/metacritic.js'
 import {Link} from  'expo-router'
 
 import { Ionicons } from '@expo/vector-icons';
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 const icon = require('./assets/CleanSpark-1024x576.jpg');
 const imageprom = require('./assets/enterprise.jpg');
@@ -17,6 +18,7 @@ export default function App() {
   }, [])
 
   return (
+    <SafeAreaView>
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.container}>
         <Image
@@ -44,7 +46,7 @@ export default function App() {
              height: 50 , 
              justifyContent:'center', 
              alignItems:'center',
-             paddingLeft:'45%'
+             paddingLeft:'65%'
             }]}>
             <Text style={styles.txtBut}>Start</Text>
           </Link>
@@ -61,7 +63,7 @@ export default function App() {
             }}
           />
         </View>
-      </View>
+      
       <View style={styles.moreText}>
         <View style={styles.card}>
           <Text style={styles.textTitleStyleMore}>Tenemos los mejores productos</Text>
@@ -85,10 +87,11 @@ export default function App() {
             </View>
           </View>
         </View>
+        </View>
       </View>
-      
       <StatusBar barStyle="dark-content" />
     </ScrollView>
+    </SafeAreaView>
   )
 }
 
@@ -100,6 +103,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: 12,
+    height:'auto',
+    width:'auto',
+    margin:30
   },
   sep:{
     width:'auto',
@@ -111,6 +117,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     height: 'auto',
+    paddingLeft:60
   },
   textTitleStyle: {
     fontSize: 20,
@@ -126,9 +133,8 @@ const styles = StyleSheet.create({
     width:380,
   },
   card: {
-    backgroundColor: '#f9f9f9',
     borderRadius: 12,
-    padding: 12,
+    padding: 30,
     margin: 12,
     width: 'auto',
     height: 'auto',
@@ -190,8 +196,9 @@ const styles = StyleSheet.create({
   },
   txtBut:{
     color:'#ffff',
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: 'bold',
+
   },
   cardProm: {
     backgroundColor: '#DEDEDE',
@@ -208,6 +215,7 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       width:'auto',
       gap:5,
+      height:500
     }
 
 

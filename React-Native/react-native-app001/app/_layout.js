@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Animated, Easing } from 'react-native';
 import { Slot, usePathname } from 'expo-router';
 import { Link } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
-
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const Layout = () => {
     const [currentPath, setCurrentPath] = useState('');
@@ -25,38 +25,31 @@ const Layout = () => {
     }, [activeMenue, menuAnimation]);
 
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
             {currentPath !== '/' && (
+        
                 <View style={styles.header}>
                     <Link href='/pages/start' style={[styles.btnEdit]}>
                         <Text style={styles.txtBut}>
-                            Inicio {currentPath === '/pages/start' &&    <Ionicons name="ellipse" size={15} color="white" />}
+                            Inicio {currentPath === '/pages/start' && <Ionicons name="ellipse" size={15} color="white" />}
                         </Text>
                     </Link>
                     <Link href='/pages/products' style={[styles.btnEdit]}>
                         <Text style={styles.txtBut}>
-                            Products {currentPath === '/pages/products' &&  <Ionicons name="ellipse" size={15} color="white" />}
+                            Products {currentPath === '/pages/products' && <Ionicons name="ellipse" size={15} color="white" />}
                         </Text>
                     </Link>
                     <Link href='/pages/about' style={[styles.btnEdit]}>
                         <Text style={styles.txtBut}>
-                            About {currentPath === '/pages/about' &&  <Ionicons name="ellipse" size={15} color="white" />}
+                            About {currentPath === '/pages/about' && <Ionicons name="ellipse" size={15} color="white" />}
                         </Text>
                     </Link>
-                    {
-                        activeMenue ? (
-                            <Text style={styles.icon} onPress={() => setActiveMenue(!activeMenue)}>
-                                  <Ionicons name="grid" size={25} color="white" />
-                            </Text>
-                        ) : (
-                            <Text style={styles.icon} onPress={() => setActiveMenue(!activeMenue)}>
-                                  <Ionicons name="grid-outline" size={25} color="white" />
-                            </Text>
-                        )
-                    }
+                    <Text style={styles.icon} onPress={() => setActiveMenue(!activeMenue)}>
+                        <Ionicons name={activeMenue ? "grid" : "grid-outline"} size={25} color="white" />
+                    </Text>
                 </View>
             )}
-    
+
             <Animated.View style={[styles.menu, { transform: [{ translateX: menuAnimation }] }]}>
                 <View style={styles.menuText}>
                     <View style={styles.containerIconsMenue}>
@@ -71,11 +64,10 @@ const Layout = () => {
                     <View>
                         <Text style={styles.textM}><Ionicons name="ellipsis-vertical" size={20} color="white" />   More</Text>
                     </View>
-
                 </View>
             </Animated.View>
             <Slot />
-        </View>
+        </SafeAreaView>
     );
 };
 
@@ -88,18 +80,17 @@ const styles = StyleSheet.create({
     header: {
         flexDirection: 'row',
         gap: 12,
-        backgroundColor: 'rgba(33, 150, 243, 0.8)', // Semi-transparent background
+        backgroundColor: 'rgba(33, 150, 243, 0.8)', 
         justifyContent: 'space-around',
         alignItems: 'center',
         height: 50,
-        marginTop: 30,
         transition: 'all 0.3s ease',
         shadowColor: '#000',
         shadowOffset: { width: -10, height: -10 },
         shadowOpacity: 1,
         shadowRadius: 10,
         elevation: 5,
-        backdropFilter: 'blur(10px)', // Blur effect
+        backdropFilter: 'blur(10px)', 
     },
     headerText: {
         fontSize: 21,
@@ -138,14 +129,14 @@ const styles = StyleSheet.create({
     },
     menu: {
         position: 'absolute',
-        top: 80,
+        top: 95,
         right: 0,
         width: 220,
         height: '100%',
         backgroundColor: '#2196f3',
         alignItems: 'center',
         flexDirection: 'column',
-        zIndex: 10,
+        zIndex: 100,
         shadowColor: '#000',
         shadowOffset: { width: -10, height: 0 },
         shadowOpacity: 1,
@@ -171,7 +162,5 @@ const styles = StyleSheet.create({
         width: 'auto',
     },
 });
-
-
 
 export default Layout;

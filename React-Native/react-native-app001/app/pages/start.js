@@ -1,11 +1,14 @@
 import React from 'react';
 import { View, Text, StyleSheet , ScrollView  } from 'react-native';
 
+import { SafeAreaView } from 'react-native-safe-area-context';
+
 import { StatusBar } from 'expo-status-bar'
 
 
 const Home = () => {
     return (
+
         <View style={styles.container}>
               <StatusBar style="dark" />
               <ScrollView showsVerticalScrollIndicator={false}>
@@ -16,7 +19,6 @@ const Home = () => {
         </View>
     );
 };
-
 const styles = StyleSheet.create({
     container: {
         flex: 1,
