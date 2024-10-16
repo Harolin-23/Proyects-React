@@ -6,7 +6,7 @@
 
 Este repositorio contiene tres proyectos desarrollados con diferentes tecnologías de React: 
 
-## Carpetas de Proyectos
+## Carpetas de React
 
 1. **React Web**
    - Descripción: Aplicación web desarrollada con React.
