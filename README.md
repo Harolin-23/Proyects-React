@@ -13,7 +13,7 @@ Este repositorio contiene tres proyectos desarrollados con diferentes tecnologí
    - Funcionalidades: [Lista de funcionalidades implementadas]
    - Instalación:
      ```bash
-     cd react-web
+     cd React-Proyects
      npm install
      npm start
      ```
@@ -23,7 +23,7 @@ Este repositorio contiene tres proyectos desarrollados con diferentes tecnologí
    - Funcionalidades: [Lista de funcionalidades implementadas]
    - Instalación:
      ```bash
-     cd nextjs
+     cd Next
      npm install
      npm run dev
      ```
@@ -33,7 +33,7 @@ Este repositorio contiene tres proyectos desarrollados con diferentes tecnologí
    - Funcionalidades: [Lista de funcionalidades implementadas]
    - Instalación:
      ```bash
-     cd react-native
+     cd React-Native
      npm install
      npm run android # or npm run ios
      ```
